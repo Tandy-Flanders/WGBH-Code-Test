@@ -16,8 +16,8 @@
 
       #play_container {
           visibility: visible;
-          padding-top: 90%;
-          padding-bottom: 10%;
+          padding-top: 50%;
+          padding-bottom: 50%;
           /* padding-top: 288px;
           padding-bottom: 288px; */
         }
@@ -25,7 +25,7 @@
         #play_button {
           border: none;
           visibility: visible;
-          background-image: url("file:///C:/Users/Riley/Downloads/WGBHDigital_codetest/WGBHDigital_codetest/images/play_btn.png");
+          background-image: url("WGBH-Code-Test/play_btn.png");
           height: 108px;
           width: 118px;
           display: block;
@@ -41,8 +41,8 @@
         #ruff_container {
           -webkitAnimationPlayState = "paused";
           animation-play-state: paused;
-          -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+          -webkit-animation-duration: 3s;
+          animation-duration: 3s;
           animation-timing-function: linear;
           -webkit-animation-name: SkrrrPaPaPum;
           animation-name: SkrrrPapaPum;
@@ -53,11 +53,11 @@
             opacity: 0;
           }
           80% {
-            transform:translateY(-20px);
+            transform:translateY(0px);
             opacity: 1;
           }
           100% {
-            transform:translateY(-30px);
+            transform:translateY(0px);
             opacity: 1;
           }
         }
@@ -84,7 +84,7 @@
       <button class="trigger" id="play_button" onclick="play_function()"></button>
     </div>
     <div id="ruff_container" class="slider">
-        <img src="../images/ruff_splash.png" class="ruff_splash" id="ruff_splash">
+        <img src="WGBH-Code-Test/ruff_splash.png">
     </div>
 </body>
 </html>
