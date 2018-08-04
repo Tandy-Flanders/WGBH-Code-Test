@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <link rel="css/stylesheet.css" type="text/css" href="css/stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script> -->
+<title>WGBH Digital Code Test</title>
+
+  <style>
+      body {
+          background-color: #5abfc8;
+          background-size: 1024px 576px;
+          padding: 0px;
+    }
+
+      #play_container {
+          visibility: visible;
+          padding-top: 90%;
+          padding-bottom: 10%;
+          /* padding-top: 288px;
+          padding-bottom: 288px; */
+        }
+
+        #play_button {
+          border: none;
+          visibility: visible;
+          background-image: url("file:///C:/Users/Riley/Downloads/WGBHDigital_codetest/WGBHDigital_codetest/images/play_btn.png");
+          height: 108px;
+          width: 118px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0px;
+        }
+      #ruff_splash {
+        height: 439px;
+        width: 562px;
+        padding: 0px;
+      }
+        #ruff_container {
+          -webkitAnimationPlayState = "paused";
+          animation-play-state: paused;
+          -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+          animation-timing-function: linear;
+          -webkit-animation-name: SkrrrPaPaPum;
+          animation-name: SkrrrPapaPum;
+  }
+        @keyframes SkrrrPapaPum {
+          0% {
+            transform:translateY(500px);
+            opacity: 0;
+          }
+          80% {
+            transform:translateY(-20px);
+            opacity: 1;
+          }
+          100% {
+            transform:translateY(-30px);
+            opacity: 1;
+          }
+        }
+      /* the 0px padding is to try and remove the small blank space under ruffman's image */
+
+        .slider {
+        padding-bottom: 0px;
+        padding-left:10%;
+      }
+
+  </style>
+
+  <script>
+      function play_function() {
+          document.getElementById("play_button").style.display = "none";
+          document.getElementById("ruff_container").style.WebkitAnimationPlayState = "running"; // Code for Chrome, Safari, and Opera
+          document.getElementById("ruff_container").style.animationPlayState = "running";
+        }
+  </script>
+
+</head>
+<body>
+    <div id="play_container">
+      <button class="trigger" id="play_button" onclick="play_function()"></button>
+    </div>
+    <div id="ruff_container" class="slider">
+        <img src="../images/ruff_splash.png" class="ruff_splash" id="ruff_splash">
+    </div>
+</body>
+</html>
