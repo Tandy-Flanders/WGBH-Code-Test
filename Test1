@@ -2,66 +2,95 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<!-- <link rel="css/stylesheet.css" type="text/css" href="css/stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script> -->
 <title>WGBH Digital Code Test</title>
-  <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
 
-<style>
-    body {
-        background-color: black;
-  }
-    /* div.play_buttonButton input {
-      background-image:<img src="../images/play_btn.png">;
-      cursor:pointer;
-      width: 200px;
-      height: 100px;
-      border: none;
-} */
-      #active_area {
+  <style>
+      body {
           background-color: #5abfc8;
           background-size: 1024px 576px;
-        }
-    #play_container {
-        visibility: visible;
-        /* padding-top: 50%;
-        padding-bottom: 50%; */
-        padding-top: 288px;
-        padding-bottom: 288px;
-      }
-    /* .play { */
-      #play_button {
-        visibility: visible;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    #ruff_splash {
-      visibility: hidden;
-      }
-</style>
+          padding: 0px;
+    }
 
-<script>
-    play_function() {
-      alert("Hello! I am an alert box!!");
-        // document.getElementByid('play_image').style.display = none;
-        // document.getElementById('ruff_splash').style.visibility = visible;
-        // document.getElementById('ruff_container').style.visibility = 'hidden';
-        // .play_container.style.visibility = 'hidden';
-        // .play.style.display = 'none';
-        // .ruff_splash.style.visibility = 'visible';
+      #play_container {
+          visibility: visible;
+          padding-top: 50%;
+          padding-bottom: 50%;
+          /* padding-top: 288px;
+          padding-bottom: 288px; */
+        }
+
+        #play_button {
+          border: none;
+          visibility: visible;
+          background-image: url("file:///C:/Users/Riley/Downloads/WGBHDigital_codetest/WGBHDigital_codetest/images/play_btn.png");
+          height: 108px;
+          width: 118px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0px;
+        }
+      #ruff_splash {
+        height: 439px;
+        width: 562px;
+        padding: 0px;
+        vertical-align: bottom;
       }
-</script>
+        #ruff_container {
+          -webkitAnimationPlayState = "paused";
+          animation-play-state: paused;
+          -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+          animation-timing-function: linear;
+          -webkit-animation-name: SkrrrPaPaPum;
+          animation-name: SkrrrPapaPum;
+  }
+        @keyframes SkrrrPapaPum {
+          0% {
+            transform:translateY(500px);
+            opacity: 0;
+          }
+          10% {
+            transform:translateY(450px);
+            opacity: 1;
+          }
+          100% {
+            transform:translateY(0px);
+            opacity: 1;
+          }
+        }
+      /* the 0px padding is to try and remove the small blank space under ruffman's image */
+
+        .slider {
+        padding-bottom: 0px;
+        padding-left:10%;
+      }
+
+
+      .slider.close {
+        top: 100%;
+        height: 0;
+      }
+  </style>
+
+  <script>
+      function play_function() {
+          document.getElementById("play_button").style.display = "none";
+          document.getElementById("ruff_container").style.WebkitAnimationPlayState = "running"; // Code for Chrome, Safari, and Opera
+          document.getElementById("ruff_container").style.animationPlayState = "running";
+        }
+  </script>
 
 </head>
-  <body>
-    <div id="active_area">
-      <!--  May not be needed-->
-      <div id="play_container">
-        <img src="../images/play_btn.png alt=""><input type="image" src="../images/play_btn.png" class="play" id="play_image" onclick="play_function">
-              
-      </div>
-      <div class="ruff_container">
-        <img id="cat" src="../images/ruff_splash.png" alt="ruff" class="ruff_splash" id="ruff_splash">
-      </div>
+<body>
+    <div id="play_container">
+      <button class="trigger" id="play_button" onclick="play_function()"></button>
     </div>
-  </body>
+    <div id="ruff_container" class="slider">
+        <img src="../images/ruff_splash.png" class="ruff_splash" id="ruff_splash">
+    </div>
+</body>
 </html>
