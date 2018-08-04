@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WGBH Digital Code Test</title>
+  <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+
+<style>
+    body {
+        background-color: black;
+  }
+    /* div.play_buttonButton input {
+      background-image:<img src="../images/play_btn.png">;
+      cursor:pointer;
+      width: 200px;
+      height: 100px;
+      border: none;
+} */
+      #active_area {
+          background-color: #5abfc8;
+          background-size: 1024px 576px;
+        }
+    #play_container {
+        visibility: visible;
+        /* padding-top: 50%;
+        padding-bottom: 50%; */
+        padding-top: 288px;
+        padding-bottom: 288px;
+      }
+    /* .play { */
+      #play_button {
+        visibility: visible;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    #ruff_splash {
+      visibility: hidden;
+      }
+</style>
+
+<script>
+    play_function() {
+      alert("Hello! I am an alert box!!");
+        // document.getElementByid('play_image').style.display = none;
+        // document.getElementById('ruff_splash').style.visibility = visible;
+        // document.getElementById('ruff_container').style.visibility = 'hidden';
+        // .play_container.style.visibility = 'hidden';
+        // .play.style.display = 'none';
+        // .ruff_splash.style.visibility = 'visible';
+      }
+</script>
+
+</head>
+  <body>
+    <div id="active_area">
+      <!--  May not be needed-->
+      <div id="play_container">
+        <img src="../images/play_btn.png alt=""><input type="image" src="../images/play_btn.png" class="play" id="play_image" onclick="play_function">
+              
+      </div>
+      <div class="ruff_container">
+        <img id="cat" src="../images/ruff_splash.png" alt="ruff" class="ruff_splash" id="ruff_splash">
+      </div>
+    </div>
+  </body>
+</html>
